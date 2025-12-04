@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/patriotic_gradient">
+
+    <!-- Scrollable Card with Rules -->
+    <ScrollView
+        android:id="@+id/scrollViewRules"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Archery Rulebook"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:scrollbars="vertical"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="15dp"
+                    android:padding="16dp"
+                    android:lineSpacingExtra="4dp"/>
+
+                <!-- Rules List -->
+                <TextView
+                    android:id="@+id/rulesTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1. Each player gets 6 arrows per round.\n\n2. Hitting the bullseye gives maximum points.\n\n3. Outer rings give progressively fewer points (10 to 1).\n\n4. If an arrow touches a line, the higher score counts.\n\n5. Crossing the shooting line while shooting results in a foul.\n\n6. Archers must release arrows within the time limit.\n\n7. The player with the highest total points wins.\n\n8. If scores are tied, a single arrow shoot-off decides the winner.\n\n9. Only approved bows, strings, and arrows are allowed.\n\n10. Arrows may only be collected after all players finish shooting."
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:padding="16dp"
+                    android:lineSpacingExtra="4dp"
+                    android:scrollbars="vertical"/>
+
+                <!-- Text above the Image -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Archery Face"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"/>
+
+                <!-- Archery Ring Image -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/archeryring"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+
+    <!-- Bottom Navigation (kept same as your code) -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottom_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+        android:layout_margin="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:paddingVertical="12dp"
+            android:orientation="horizontal">
+
+            <!-- Profile -->
+            <LinearLayout
+                android:id="@+id/profileLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="4dp">
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_profile"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:textColor="#050505"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Tests -->
+            <LinearLayout
+                android:id="@+id/testsLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="4dp">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/running"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tests"
+                    android:textColor="#0B0B0B"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Events -->
+            <LinearLayout
+                android:id="@+id/eventsLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="4dp">
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/trophy"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Events"
+                    android:textColor="#090909"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Rulebook -->
+            <LinearLayout
+                android:id="@+id/rulebookLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="4dp">
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/document"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rulebook"
+                    android:textColor="#0B0B0B"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

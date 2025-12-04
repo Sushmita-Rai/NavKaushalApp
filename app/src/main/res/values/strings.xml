@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">navkaushal</string>
+    <string name="height">Height: 172 cm</string>
+    <string name="weight">Weight: 70 kg</string>
+    <string name="age">Age: 17</string>
+    <string name="state">State: Rajasthan</string>
+    <string name="ranking">Ranking: 28</string>
+    ye string.xml ka h
+
+
+
+        <string name="app_events">Events</string>
+        <string name="event_title">Archery Championship</string>
+        <string name="event_date">Date: 10 October, 2025</string>
+        <string name="event_description">Join the best archers from all over Jaipur.</string>
+        <string name="location">Venue: KL Saini Stadium, Kaveri Path, Jaipur .</string>
+        <string name="event_title_2">State-Level Archery Meet</string>
+        <string name="event_date_2">Date: 18 October, 2025</string>
+        <string name="event_description_2">Meet the Arjunas of Rajasthan</string>
+        <string name="location_2">Venue: SMS Stadium, Jaipur .</string>
+        <string name="event_title_3">The Golden Arrow: Archery Finals</string>
+        <string name="event_date_3">Date: 24 October, 2025</string>
+        <string name="event_description_3">The finest marksmen defining battle of skill, strategy, and focus.</string>
+        <string name="location_3">Venue: SMS Stadium, Jaipur .</string>
+
+
+
+</resources>
